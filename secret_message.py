@@ -1,4 +1,4 @@
-""" Section 9 - Strings
+"""
 Convert word to unicode and back to word again
 
 # Computers assign characters with a number known as a Unicode A-Z have the numbers 65-90 and a-z 97-122
