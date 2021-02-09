@@ -1,5 +1,6 @@
 """ Word cloud """
-# Still contains bugs
+# Part of the word cloud project as it requires an older python version
+# active issue: it removes a full word with any punctuation 
 
 def calculate_frequencies(file_contents):
     punctuations = "!()-[]{};:'\,<>.?@\#$%^&*_~''"
@@ -28,6 +29,6 @@ def calculate_frequencies(file_contents):
     return words_dict
 
 
-file_contents = " Dear Team, Dear Team, Dear Team, if .,AASDanisad.,. google, Google Coursera ."
+file_contents = " Dear Team, Dear Team, Dear Team, if .,AASDanisad.,. google, Google ."
 
 print(calculate_frequencies(file_contents))
