@@ -2,7 +2,6 @@
 # Still contains bugs
 
 def calculate_frequencies(file_contents):
-
     punctuations = "!()-[]{};:'\,<>.?@\#$%^&*_~''"
     uninteresting_words = ["the", "a", "to", "if", "is", "it", "of", "and", "or", "an", "as", "i", "me", "my", "we",
                            "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its",
