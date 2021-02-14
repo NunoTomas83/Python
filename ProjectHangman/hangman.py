@@ -22,25 +22,26 @@ def get_random_word():
     # print("random word is: {}".format(random_word))
     return random_word.upper()
 
+# Deprecated function
+"""def remove_chars(original_string, chars_to_remove):
+    # Function to remove unwanted characters from the string
+    # and returns the original string with the new format.
 
-def remove_chars(original_string, chars_to_remove):
-    """ Function to remove unwanted characters from the string
-    and returns the original string with the new format. """
     for char in chars_to_remove:
         original_string = original_string.replace(char, "")
     # print(original_string)
-    return original_string
+    return original_string"""
 
 
 def hangman():
     """ Function to run the game. """
     word = get_random_word()
-    print(word)
+    # print(word)
     word_letter = set(word)  # Letters in word
     alphabet = set(string.ascii_uppercase)
     used_letters = set()  # Letters used
 
-    lives = 5
+    lives = 5  # magic number, it can be set any number
 
     # User input
     while len(word_letter) > 0 and lives > 0:
@@ -67,9 +68,10 @@ def hangman():
             print("Invalid guess!")
 
     if lives == 0:
-        print("You lost and were hanged!")
+        print("You lost and were hanged! The correct word was: {}".format(word))
     else:
         print("Congratulations! You guessed the {} word.". format(word))
 
 
-hangman()
+if __name__ == '__main__':
+    hangman()
